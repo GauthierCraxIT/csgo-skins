@@ -1,0 +1,12 @@
+dist/**
+**/node_modules/**
+yarn-error.logg
+Dockerfile*
+docker-compose*
+azure-pipelines*
+.dockerignore
+.git
+.gitignore
+README.md
+LICENSE
+.vscode

@@ -1,0 +1,55 @@
+
+div {
+  background: #1d2021;
+  margin: auto;
+  margin-top: 10vh;
+  width: 50vw;
+  min-height: 50vh;
+  border-radius: 2vh;
+  text-align: center;
+}
+
+h1 {
+    color:white;
+    padding:2vh;
+    margin:0;
+}
+
+h3 {
+    color:white;
+    text-align:left;
+}
+
+p, li,ul {
+    color:white;
+    text-align:left;
+}
+
+li {
+    margin-top:2vh;
+}
+
+span {
+    font-size: 1.4vh;
+}
+
+a {
+  color: #3e4685;
+}
+
+button, button.small {
+  background: #3e4685;
+  font-size: 2vh;
+  cursor: pointer;
+  color: white;
+  border: none;
+  padding: 5px;
+  width: auto;
+  border-radius: 2vh;
+}
+
+button.small {
+    font-size:1.5vh;
+    border-radius:0;
+    
+}

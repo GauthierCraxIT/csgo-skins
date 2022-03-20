@@ -1,0 +1,34 @@
+
+
+<div class="main" *ngIf="router.url === '/'">
+  <div class="item" (click)="router.navigate(['pistols'])">
+    <img src="../assets/images/pistol.png" /><br /><br />
+    Pistols
+  </div>
+
+  <div class="item" (click)="router.navigate(['rifles'])">
+    <img src="../assets/images/sniper.png" /><br /><br />
+    Rifles
+  </div>
+
+  <div class="item" (click)="router.navigate(['heavy'])">
+    <img src="../assets/images/shotgun.png" /><br /><br />
+    Heavy
+  </div>
+
+  <div class="item" (click)="router.navigate(['smgs'])">
+    <img src="../assets/images/smg.png" /><br /><br />
+    SMG
+  </div>
+
+  <div class="item" (click)="router.navigate(['knives'])">
+    <img src="../assets/images/knife.png" /><br /><br />
+    Knives
+  </div>
+</div>
+
+
+<app-pistols></app-pistols>
+<app-rifles></app-rifles>
+<app-heavy></app-heavy>
+<app-smgs></app-smgs>

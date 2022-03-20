@@ -1,0 +1,17 @@
+
+
+<form (ngSubmit)="loginForm()" *ngIf="router.url === '/login'">
+  <br /><br />
+  <div class="imgwrap">
+    <fa-icon style="color:white;" size="5x" [icon]="faUser"></fa-icon>
+  </div>
+
+    <input type="text" placeholder="Username" name="UserName" [(ngModel)]="UserName" />
+  <br />
+    <input type="password" placeholder="Password" name="Password" [(ngModel)]="Password" />
+  <br /><br />
+
+  <a (click)="router.navigate(['/register'])" style="color:white">New here? Click here to register</a><br /><br />
+  <input type="submit" value="Login" />
+
+</form>

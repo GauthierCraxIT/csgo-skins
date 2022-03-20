@@ -1,0 +1,46 @@
+
+
+form {
+  background: #1d2021;
+  margin:auto;
+  margin-top:10vh;
+  width:25vw;
+  min-height:50vh;
+  border-radius:2vh;
+  text-align:center;
+}
+
+.imgwrap {
+  margin: auto;
+  background: #3e4685;
+  width: 50%;
+  height:15vh;
+  border-radius: 50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:3vh;
+}
+
+input[type=submit] {
+  background: #3e4685;
+  font-size: 2.5vh;
+  cursor:pointer;
+}
+
+input[type=text], input[type=password] {
+  color: #333;
+  padding-left:10px;
+}
+
+input {
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  color: white;
+  font-size: 2vh;
+  padding:5px;
+  width: 60%;
+  border-radius: 2vh;
+  border: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

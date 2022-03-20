@@ -1,0 +1,11 @@
+
+<div class="overlay">
+
+</div>
+
+<app-login></app-login>
+<app-register></app-register>
+<app-registered></app-registered>
+
+<app-weapons *ngIf="!(router.url === '/login' || router.url === '/register')"></app-weapons>
+<app-knives *ngIf="!(router.url === '/login' || router.url === '/register')"></app-knives>

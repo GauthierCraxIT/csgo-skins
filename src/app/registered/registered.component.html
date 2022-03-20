@@ -1,0 +1,35 @@
+
+
+<div *ngIf="router.url.startsWith('/registered')">
+
+  <div>
+    <h1>Get Started</h1>
+    <br />
+
+    <div style="margin:auto; width:70%; margin-bottom:5px">
+      <h3>Declare your Id</h3>
+      <ul>
+        <li>Navigate to your CS:GO Directory <span>(eg C:\program files (x86)\steam\steamapps\common\Counter-Strike Global Offensive)</span></li>
+        <li>Create a new file: settings.dat <span>or <a href="assets/files/settings.dat" target="_blank" rel="noopener noreferrer">click here to download</a> (move to csgo dir)</span></li>
+        <li>To view your Id, click <button class="small" (click)="loadId()">load Id</button></li>
+        <li>Copy and paste this line below in your config file. <u>Your config should look like this</u><br /><span>id={{Id}}</span></li>
+      </ul>
+
+      <br />
+
+      <h3>Inject the skinchanger</h3>
+      <ul>
+        <li>Create a new folder named at C:\Windows <span>(eg C:\Windows\Skinchanger)</span></li>
+        <li>Download SkinChanger.zip <span><a href="assets/files/SkinChanger.zip" target="_blank" rel="noopener noreferrer">click here to download</a></span></li>
+        <li>Extract the SkinChanger.zip and place the skinchanger.dll and injector.exe in your new folder</li>
+        <li>Start CS:GO and run the injector</li>
+      </ul>
+
+      <br /><br />
+      <button (click)="router.navigate(['/'])">Done</button>
+      <br /><br />
+    </div>
+
+
+  </div>
+</div>

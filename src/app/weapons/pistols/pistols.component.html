@@ -1,0 +1,42 @@
+<div *ngIf="router.url === '/pistols'" style="margin-top:5vh">
+
+  <h2>Choose your Pistol</h2>
+
+  <div style="width:65%; margin:auto">
+    <fa-icon (click)="router.navigate(['/'])" style="color:white; cursor:pointer" size="3x" [icon]="faLongArrowAltLeft"></fa-icon>
+  </div>
+
+  <div *ngIf="weaponService.isLoading == true" style="margin:auto; width:1%">
+    <div>
+      <fa-icon style="color:white;" size="5x" [icon]="faSpinner" [spin]="true"></fa-icon>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="item" *ngFor="let item of rifleData">
+      <img *ngIf="item.img == ''; else realtimeImages" (click)="loadWeaponSkins(item.weapon)" src="../assets/images/pistols/{{item.weapon}}.png" style="width:70%" />
+
+      <ng-template #realtimeImages>
+        <img (click)="loadWeaponSkins(item.weapon)" src="data:image/png;base64,{{item.img}}" style="width:70%" /><br /><br />
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+
+<div *ngFor="let item of rifleData">
+  <div *ngIf="router.url === '/pistols/' + item.weapon">
+    <h2>Choose your {{item.weapon}} skin</h2>
+
+    <div style="width:65%; margin:auto">
+      <fa-icon (click)="router.navigate(['/pistols']); getSelectedSkins()" style="color:white; cursor:pointer" size="3x" [icon]="faLongArrowAltLeft"></fa-icon>
+    </div>
+
+    <div class="main">
+      <div class="item" *ngFor="let weaponSkin of weaponSkins">
+        <p>{{weaponSkin.skin.name}}</p>
+        <img (click)="selectedSkin(weaponSkin.name, weaponSkin.skin.skinId)" style="width:60%" src="{{weaponSkin.skin.img}}" />
+      </div>
+    </div>
+  </div>
+</div>

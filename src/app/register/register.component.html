@@ -1,0 +1,16 @@
+<form (ngSubmit)="registerForm()" *ngIf="router.url === '/register'">
+  <br /><br />
+  <div class="imgwrap">
+    <fa-icon style="color:white;" size="5x" [icon]="faUser"></fa-icon>
+  </div>
+  <input type="text" placeholder="SteamId64" name="SteamId64" [(ngModel)]="SteamId64" />
+  <br />
+  <input type="text" placeholder="Username" name="UserName" [(ngModel)]="UserName" />
+  <br />
+  <input type="password" placeholder="Password" name="Password" [(ngModel)]="Password" />
+  <br /><br /><br />
+
+
+  <input type="submit" value="Register" />
+
+</form>

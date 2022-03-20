@@ -1,0 +1,30 @@
+
+
+<div class="overlay" *ngIf="router.url.startsWith('/knives')">
+  <div *ngFor="let knife of knives" style="position:relative">
+    <img (click)="loadWeaponSkins(knife)" src="../assets/images/knives/{{knife}}.png" style="width:80%; margin-top:1vh" />
+  </div>
+    
+</div>
+
+<div *ngIf="router.url.startsWith('/knives')">
+  <div>
+    <div style="width:65%; margin:auto">
+      <fa-icon (click)="router.navigate(['/rifles'])" style="color:white; cursor:pointer" size="3x" [icon]="faLongArrowAltLeft"></fa-icon>
+    </div>
+
+    <div *ngIf="weaponService.isLoading == true" style="margin:auto; width:1%">
+      <div>
+        <fa-icon style="color:white;" size="5x" [icon]="faSpinner" [spin]="true"></fa-icon>
+      </div>
+    </div>
+
+    
+    <div class="main" *ngIf="weaponService.isLoading == false">
+      <div class="item" *ngFor="let weaponSkin of weaponSkins">
+        <p>{{weaponSkin.skin.name}}</p>
+        <img (click)="selectedSkin(weaponSkin.name, weaponSkin.skin.skinId)" style="width:60%" src="{{weaponSkin.skin.img}}" />
+      </div>
+    </div>
+  </div>
+</div>
